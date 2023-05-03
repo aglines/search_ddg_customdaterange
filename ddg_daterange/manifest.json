@@ -6,12 +6,12 @@
     "description": "Adds a daterange selector '&df=y' (past year) to DuckDuckGo search requests",
 
     "icons": {
-        "48": "icons/icon48.png",
+        "48": "icons/icon48.png"
     },
     "permissions": [
         "webRequest",
-        "webRequestBlocking",
-        "<all_urls>"
+        "webRequestBlocking"
+        
     ],
     "background": {
         "scripts": ["background.js"]
