@@ -13,6 +13,7 @@ function updateCustomDateRangeVisibility() {
 }
 
 dateRangeSelect.addEventListener('change', () => {
+    updateCustomDateRangeVisibility();
     browser.storage.local.set({
         dateRangeOption: dateRangeSelect.value,
         fromDate: fromDateInput.value,
@@ -21,15 +22,11 @@ dateRangeSelect.addEventListener('change', () => {
 });
 
 fromDateInput.addEventListener('change', () => {
-    browser.storage.local.set({
-        fromDate: fromDateInput.value
-    });
+    browser.storage.local.set({ fromDate: fromDateInput.value });
 });
 
 toDateInput.addEventListener('change', () => {
-    browser.storage.local.set({
-        toDate: toDateInput.value
-    });
+    browser.storage.local.set({ toDate: toDateInput.value });
 });
 
 // Show popup with previously saved values

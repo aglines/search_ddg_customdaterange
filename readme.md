@@ -5,10 +5,19 @@
 - A Javascript bookmarklet could do this, but it's the same amount of work
 - A firefox extension can do it:  insert "&df=y" into the URL (for date range = the past year)
 - Extension v1 was submitted & awaiting review at https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-date-range/
+- let user pick their own date range to be used every time
+
+# To run this code:
+- Clone the repo into a local folder
+- In Firefox, type "about:debugging" in the address bar
+- Click "This Firefox" (below Setup, top left as of this writing), then "Load Temporary Add-on"
+- Navigate to the local folder where you cloned the repo, choose "manifest.json", click "Open"
+- You should see "DuckDuckGo Date Range" in Temporary Extensions. (it will be functional until Firefox is closed)
+- Click the Extensions icon (a puzzle-piece), hover over the area, click Open Extension
+- 
 
 
 ## To do:
-- let user pick their own date range to be used every time
 
 ## Tasks done : 
 - create manfiest.json
