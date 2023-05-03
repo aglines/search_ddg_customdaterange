@@ -8,6 +8,9 @@ Simplest code is to insert "&df=y" into the GET method (since I usually pick "in
 
 Looks like a Firefox extension can do this, I will go down this path.  
 
+Extension submitted and awaiting review at https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-date-range/
+
+
 ## Tutorials 
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension?ref=hackernoon.com
 
@@ -27,10 +30,11 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRe
 - create icons
 - load extension into Firefox
 - tested happy paths, looks OK
-
-## To do:
 - package / sign to install manually
 - update the person out there who also wanted this to exist
+
+
+## To do:
 
 ## Not doing 
 - not testing other paths, i need this done today (the age-old struggle twixt testing and being done)
