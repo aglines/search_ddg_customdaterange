@@ -25,10 +25,13 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRe
 - create manfiest.json
 - create background.js
 - create icons
+- load extension into Firefox
+- tested happy paths, looks OK
+- not testing other paths, i need this done today (lo the struggle twixt QA and devs appears)
+
 
 ## To do:
-- load extension into Firefox
-- test happy paths
+
 - some stress tests incl diff browsers
 - add a setting so user can pick a custom date range to be used every time
 - publish? or at least respond to redditorarna who I saw also wished for this to exist
