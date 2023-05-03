@@ -3,7 +3,7 @@
     "name": "DuckDuckGo Date Range",
     "version": "1.0",
     
-    "description": "Adds a daterange selector '&df=y' (past year) to DuckDuckGo search requests",
+    "description": "All DuckDuckGo searches are set to Past Year date range only",
 
     "icons": {
         "16": "icon16.png",
