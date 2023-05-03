@@ -1,3 +1,5 @@
+// a function to change the URL of a request
+
 function addDateRange(requestDetails) {
     const ddgUrl = 'https://duckduckgo.com/';
     const dateString = '&df=y';
@@ -8,10 +10,18 @@ function addDateRange(requestDetails) {
     // obviously having a custom date hard-coded here is weird but the point is zero user interaction,
     // maybe incorporate that into the extension later
 
-    if (requestDetails.url.startsWith(ddgUrl) && !requestDetails.url.includes(dateString) {
+    if (requestDetails.url.startsWith(ddgUrl) && !requestDetails.url.includes(dateString)) {
         const newUrl = requestDetails.url + dateString;
         return {
             redirectUrl: newUrl
         };
     }
 }
+
+// add code to listen for requests
+browser.webRequest.onBeforeRequest.addListener(
+    addDateRange,
+    { urls: ["https://duckduckgo.com/*"] },
+    ["blocking"]
+
+);
