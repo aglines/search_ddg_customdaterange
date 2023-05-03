@@ -1,29 +1,39 @@
-// a function to change the URL of a request
+// use options to date range query string
+function buildDateRangeQueryString(option, fromDate, toDate) {
+    if (option === "custom" && fromDate && toDate) {
+        return `&df=${fromDate}..${toDate}`;
+    } else if (option == "d") {
+        return "&df=d";
+    } else if (option == "w") {
+        return "&df=w";
+    } else if (option == "m") {
+        return "&df=m";
+    } else if (option == "y") {
+        return "&df=y";
+    } else if (option == "n") {
+        return "";
+    } else {
+        return "";
+    }
+    
+}
 
 function addDateRange(requestDetails) {
-    const ddgUrl = 'https://duckduckgo.com/';
-    const dateString = '&df=y';
-    // change this for other date ranges :
-    // const dateString = '&df=m'; //month, &df=w for week
-
-    // Custom date syntax: 
-    //       const dateString = '&df=2010-01-01..2020-01-01'
-    // obviously a custom date being hard-coded is weird, but it means zero user interaction
-    // Later, maybe add option to pick custom dates a user constantly
-
-    if (requestDetails.url.startsWith(ddgUrl) && !requestDetails.url.includes(dateString)) {
-        const newUrl = requestDetails.url + dateString;
-        return {
-            redirectUrl: newUrl
-        };
-    }
+    const ddgUrl = "https://duckduckgo.com/";
+    return browser.storage.local.get(["dateRangeOption", "fromDate", "toDate"]).then(result => {
+        const queryString = buildDateRangeQueryString(result.dateRangeOption, result.fromDate, result.toDate);
+        if (requestDetails.url.startsWith(ddgUrl) && !requestDetails.url.includes(queryString)) {
+            const newUrl = requestDetails.url + queryString;
+            return { redirectUrl: newUrl };
+        }
+    });
 }
+
 
 // add code to listen for requests
 browser.webRequest.onBeforeRequest.addListener(
     addDateRange,
     { urls: ["https://duckduckgo.com/*"] },
-
     ["blocking"]
     // "blocking" needed in order to redirect request
 
