@@ -6,21 +6,29 @@ A Javascript bookmarklet can set a URL where you can set specific things, but th
 
 Simplest code is to insert "&df=y" into the GET method (since I usually pick "in the last year")
 
-Looks like a Firefox extension can do this, I will go down this path.  Tutorial
+Looks like a Firefox extension can do this, I will go down this path.  
+
+## Tutorials
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension?ref=hackernoon.com
 
-Background script tutorial
+- Background script tutorial
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts_2
 
-Trigger code before a request is made - 
+- event listeners details
+https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest
+
+- Trigger code before a request is made  
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 
 
-# Tasks:
-Done Create manfiest.json
+## Tasks done : 
+- create manfiest.json
 - create background.js
 - create icons
-- load extension into Firefox
-- add a setting so user can pick a custom date range to be used every time
-- publish it maybe, respond to redditorarna som ville ha det också, I wasn't the only one who wanted this
 
+## To do:
+- load extension into Firefox
+- test happy paths
+- some stress tests incl diff browsers
+- add a setting so user can pick a custom date range to be used every time
+- publish? or at least respond to redditorarna who I saw also wished for this to exist
