@@ -8,7 +8,7 @@ Simplest code is to insert "&df=y" into the GET method (since I usually pick "in
 
 Looks like a Firefox extension can do this, I will go down this path.  
 
-## Tutorials
+## Tutorials 
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension?ref=hackernoon.com
 
 - Background script tutorial
@@ -27,11 +27,14 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRe
 - create icons
 - load extension into Firefox
 - tested happy paths, looks OK
-- not testing other paths, i need this done today (lo the struggle twixt QA and devs appears)
-
 
 ## To do:
+- package / sign to install manually
+- update the person out there who also wanted this to exist
 
+## Not doing 
+- not testing other paths, i need this done today (the age-old struggle twixt testing and being done)
 - some stress tests incl diff browsers
+
+## Maybe someday
 - add a setting so user can pick a custom date range to be used every time
-- publish? or at least respond to redditorarna who I saw also wished for this to exist
